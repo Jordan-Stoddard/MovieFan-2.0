@@ -1,0 +1,23 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+* {
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+}
+
+.nav-item {
+    a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        font-family: "Lato", sans-serif;
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    } 
+}
+
