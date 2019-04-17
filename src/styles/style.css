@@ -253,7 +253,7 @@ input:focus {
 html,
 body {
   min-height: 100%;
-  background: linear-gradient(90deg, #2d1564 -450%, black 126%);
+  background: linear-gradient(90deg, #2d1564 -250%, black 126%);
 }
 
 hr {
