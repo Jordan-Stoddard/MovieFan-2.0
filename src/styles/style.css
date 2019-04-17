@@ -473,7 +473,8 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
 .home-carousel-container .cast-img .cast-img-carousel {
   border-radius: 6px;
   box-shadow: 0px 1px 17px black;
-  width: 60%;
+  width: 50%;
+  height: 150px;
 }
 .home-carousel-container .cast-img .cast-text-carousel {
   color: darkgrey;
@@ -497,12 +498,14 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+  overflow-x: hidden;
 }
 @media (min-width: 850px) and (max-width: 1111px) {
   .home-jumbotron {
     flex-direction: column;
     margin-bottom: 90px;
     padding: 0;
+    overflow-x: hidden;
   }
 }
 @media (min-width: 501px) and (max-width: 850px) {
@@ -510,6 +513,7 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
     flex-direction: column;
     margin-bottom: 90px;
     padding: 0;
+    overflow-x: hidden;
   }
 }
 @media (min-width: 0px) and (max-width: 500px) {
@@ -517,6 +521,7 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
     flex-direction: column;
     margin-bottom: 90px;
     padding: 0;
+    overflow-x: hidden;
   }
 }
 .home-jumbotron .jumbotron-catchphrase {
@@ -1445,7 +1450,22 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
 .cast-img-container .static-cast-img {
   border-radius: 6px;
   box-shadow: 4px 4px 4px black;
-  width: 80%;
+  width: 100%;
+}
+@media (min-width: 850px) and (max-width: 1111px) {
+  .cast-img-container .static-cast-img {
+    padding: 0 3%;
+  }
+}
+@media (min-width: 850px) and (max-width: 980px) {
+  .cast-img-container .static-cast-img {
+    padding: 0 3%;
+  }
+}
+@media (min-width: 1111px) and (max-width: 1245px) {
+  .cast-img-container .static-cast-img {
+    padding: 0 3%;
+  }
 }
 @media (min-width: 501px) and (max-width: 850px) {
   .cast-img-container .static-cast-img {

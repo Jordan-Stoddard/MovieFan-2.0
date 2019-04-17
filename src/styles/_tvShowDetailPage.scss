@@ -36,7 +36,16 @@
     .static-cast-img {
         border-radius: 6px;
         box-shadow: 4px 4px 4px black;
-        width: 80%;
+        width: 100%;
+        @include large {
+            padding: 0 3%;
+        }
+        @include footerSize4 {
+            padding: 0 3%;
+        }
+        @include footerSize3 {
+            padding: 0 3%;
+        }
         @include tablet {
             width: 90%;
         }
