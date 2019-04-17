@@ -80,7 +80,7 @@ input:focus {
 
 .nav-bar-container {
   background: #ac3636;
-  background: linear-gradient(-1deg, #a68ae6 -300%, black 66%);
+  background: linear-gradient(-1deg, #a68ae6 -120%, black 66%);
   display: flex;
   align-items: center;
   padding: 0.7%;
