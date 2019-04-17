@@ -14,20 +14,17 @@ $col4: desaturate(#AA3399, 40%);
 html,
 body {
   min-height: 100%;
+  background: linear-gradient(90deg, rgb(45, 21, 100) -450%, rgb(0, 0, 0) 126%);
 }
 
-body {
-  margin: 0;
-  background: linear-gradient(90deg, rgb(166, 138, 230) -450%, black 126%);
-  font-family: "Montserrat", sans-serif;
-}
+
 
 hr {
   border: none;
   float: left;
   width: calc(100% + #{$gutter*2});
   height: 1px;
-  background: white;
+  
   margin: 15px 0 20px;
   margin-left: -$gutter;
   margin-right: -$gutter;
@@ -110,12 +107,12 @@ section {
           &:before {
             left: calc(50%);
             //width: 50%;
-            background: white;
+            background: white !important;
           }
           &:after {
             right: calc(50%);
             //width: 50%;
-            background: white;
+            background: white !important;
           }
         }
         &.hover-4 {
