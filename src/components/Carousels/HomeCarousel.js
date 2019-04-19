@@ -3,6 +3,8 @@ import { Carousel, CarouselItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
 
+// Renders the really large carousel in the movie/tv home pages.
+
 class HomeCarousel extends Component {
   state = { activeIndex: 0 };
 
