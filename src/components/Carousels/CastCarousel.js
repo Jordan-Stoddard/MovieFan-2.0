@@ -4,6 +4,8 @@ import {setCarouselSlidesOnWidth, windowWidth} from '../../helper-functions/disp
 import CastSlide from './CastSlide'
 import StaticCast from './StaticCast'
 
+// Renders cast carousel in movie/tv detail pages.
+
 
 export default function CastCarousel({cast}) {
   if (cast.length < 6) {
