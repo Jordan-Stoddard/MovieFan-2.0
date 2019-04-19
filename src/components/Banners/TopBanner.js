@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Renders top banner in topics page
+
 export default function TopBanner({title, image}) {
   return (
     <div>
