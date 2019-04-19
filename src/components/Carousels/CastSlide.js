@@ -1,6 +1,8 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
+// Renders the individual picture in the cast carousel
+
 export default function CastSlide({ cast } = this.props) {
   return (
     <div className="cast-img">
