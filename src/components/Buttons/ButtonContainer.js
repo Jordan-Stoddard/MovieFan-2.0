@@ -1,6 +1,7 @@
 import React from "react";
 import {nextPage, prevPage} from '../../helper-functions/onClick'
 
+// Renders buttons in topics page
 
 export default function ButtonContainer({page, setPage, topic}) {
   return (
