@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Renders the cast as images if the cast array is less than or equal to 6.
+
 export default function StaticCast({ cast }) {
   if(cast.length === 0) {
     return (
