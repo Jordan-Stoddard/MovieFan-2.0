@@ -7,6 +7,8 @@ import {
 } from "../../helper-functions/displayFunctions";
 import MovieSlide from "./MovieSlide";
 
+// Renders the small carousel's used on home page
+
 export default function SmallMovieCarousel({ topic, genre, media }) {
   const getMovies = useGetTopic(topic);
 
