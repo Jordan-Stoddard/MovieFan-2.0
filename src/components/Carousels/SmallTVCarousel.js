@@ -4,6 +4,8 @@ import {useGetTVTopic} from '../../dummy-api/fetchingTVHooks'
 import {setCarouselSlidesOnWidth, windowWidth} from '../../helper-functions/displayFunctions'
 import MovieSlide from './MovieSlide'
 
+// Renders the small carousels used on the TV home page.
+
 export default function SmallMovieCarousel({topic, genre, media}) {
   const TVShows = useGetTVTopic(topic)
   return (
