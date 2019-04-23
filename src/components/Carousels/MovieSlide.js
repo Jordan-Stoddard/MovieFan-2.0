@@ -1,6 +1,8 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
+// renders movie slide in small carousels on home page.
+
 export default function MovieSlide({ movie, media } = this.props) {
   return (
     <div className="slider-img">
