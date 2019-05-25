@@ -7,10 +7,8 @@ export default function Footer() {
     <div className="footer-container">
       <div className="portfolio-side">
         <div className="footer-title-container">
-          <h1 className="footer-title" data-aos="fade-right">MOVIE FAN</h1>
-          <div className="footer-nav-item-container" data-aos="fade-right">
-          {navItems()}
-          </div>
+          <h1 className="footer-title">MOVIE FAN</h1>
+          <div className="footer-nav-item-container">{navItems()}</div>
         </div>
 
         <section className="footer-section-top">
