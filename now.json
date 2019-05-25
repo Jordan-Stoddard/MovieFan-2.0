@@ -1,15 +1,16 @@
 {
     "version": 2,
     "name": "movie-fan-app",
-    
+    "build": {
+      "env": {
+        "API_KEY": "@moviefan_api_key"
+      }
+    },
     "builds": [
       {
         "src": "package.json",
         "use": "@now/static-build",
-        "config": { "distDir": "build" },
-        "env": {
-          "API_KEY": "@moviefan_api_key"
-        }
+        "config": { "distDir": "build" }
       }
     ],
     "routes": [
