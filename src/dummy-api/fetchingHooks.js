@@ -130,7 +130,7 @@ export const useGetSearch = (str) => {
   useEffect(() => {
     (() => {
       axios.get(
-        `http://api.themoviedb.org/3/search/movie?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&query=${str}`
+        `https://api.themoviedb.org/3/search/movie?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&query=${str}`
       )
       .then(res => {
         setSearchResults(res.data.results)
