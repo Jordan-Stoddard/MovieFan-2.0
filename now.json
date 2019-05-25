@@ -1,6 +1,9 @@
 {
     "version": 2,
     "name": "movie-fan-app",
+    "env": {
+      "API_KEY": "@moviefan_api_key"
+    },
     "builds": [
       {
         "src": "package.json",
