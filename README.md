@@ -1,68 +1,106 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MovieFan - Personal Project - Built by Jordan Stoddard
 
-## Available Scripts
+<div align="center"> ## Explore. Discover. Remember. </div>
 
-In the project directory, you can run:
+<div align="center"><img src="https://image.tmdb.org/t/p/original/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg" /></div>
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+# Overview 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+MovieFan allows you to browse movies from top rated to upcoming, from old favorites to the newest releases.
 
-### `npm run build`
+<strong>Front End Deployment: https://moviefanapp.online <br/>
+  Movie API: https://www.themoviedb.org/
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</strong>
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Key Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Immediately see what movies or TV shows are trending nation wide.
+- View popular, top rated, upcoming, or now playing movies and TV shows..
+- Select an individual movie or TV show to see additional details such as:
+  - Rating
+  - Movie website
+  - Movie tagline
+  - Cast
+  - Official trailer
+  - Popular reviews
+- Select a cast member of a movie or TV show to see additional details such as:
+  - Popularity
+  - Birthplace, gender, birth date
+  - Biography
+  - Popular roles
+ - Search functionality to type in an individual movie or TV show that you want to look up.
+ 
+ 
+ # Tech
 
-### `npm run eject`
+## Frontend built using:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### React
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+With its vast eco-system and modular nature React is a great choice for developing the front-end of our project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### React Hooks
+React Hooks simplify working with React due to use near exclusive use of functional components versus class components. Also, because logic can be shared, using React hooks results in smaller package sizes, which maximizes efficiency. It also allows us to abstract out a lot of local state logic keeping our component files smaller, easier to debug and more scalable.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### node-sass
 
-## Learn More
+SCSS AKA SASS is a styling compiler, however, using node-sass allows us to inherit all of the functionality of the sass styling compiler without having to run a compiler on our local machine during development.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We chose SASS as a methodology for our styling in order to be able to keep styling organized in various partial files, the ability to use mixins, variables and to keep our React component file syntax easier for humans to read.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Zeit
 
-### Code Splitting
+Our front end was deployed using Zeit. Zeit is a serverless cloud deployment experience which makes Continuous Deployment a breeze by connecting to our github repository. Some of the great features we took advantage of: Zeit only re-builds the parts of your application that have changed. No matter how large your repository. Zeit makes our code blazing fast: cold, hot and in-between. Our deployment is decomposed into small units of execution, all built, deployed and executed independently. Instead of deploying a large server, we deploy lots of small functions that look and act as one.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Minimize friction. Maximize security. Speed up our cloud.
 
-### Analyzing the Bundle Size
+Each incoming request yields a unique thread of computation in the cloud. When our deployment is not actively receiving traffic, our server stays quiet. Instead of worrying about servers uptime, tedious CPU and memory allocations and scaling algorithms, we just think about our code. Scaling doesn’t need to be complicated or expensive.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Various Third Party Packages
 
-### Making a Progressive Web App
+For a full list of all the third-party npm packages we used in the build of the app please visit [this file](https://github.com/Jordan-Stoddard/MovieFan-2.0/blob/master/package.json)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Backend built using: 
 
-### Advanced Configuration
+Backend was sourced fully by The Movie Database.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+# Security
 
-### Deployment
+ ### For Frontend:
+You will need to create an environment variable to make Unsplash API calls. 
+<br />
+Steps to create secret and env variable:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- add now dependency, in CLI: yarn add now
 
-### `npm run build` fails to minify
+- choose the now user or team that secrets will be created under, in CLI: now switch
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- create now secret, in CLI: now secret add my-secret-name my-secret-value
+**run "now secrets ls" in CLI to list all secrets 
+
+- create env variable and assign secret value to env variable, in now.json:
+```
+"build":{
+      "env":{
+        "API_KEY": "@my-secret-name"
+      }
+    },
+```
+- access env variable: `process.env.API_KEY`
+
+# Contributing
+Contributions are welcome. If you choose to contribute to this project, you agree to abide by our [Code of Conduct](https://github.com/labs12-real-estate/labs12-real-estate-FE/blob/master/AppNotes/CODE_OF_CONDUCT.md). Please create an Issue if there is a bug or feature request you are interested in adding to the project. If you would like to implement the pull request for this Issue yourself, please request permission in the Issue commentary and affirm from a Maintainer that you can proceed. Once confirmed, assign yourself the Issue in Github.
+
+Pull requests are made via the git feature branch workflow described [here](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). Once you are assigned the Issue, you can clone the repo locally, and begin working on the feature branch.
+
+As you implement tests, please ensure you are running tests in both the server and client as described in the testing section. If you are implementing new features, please introduce well thought-out unit/integration tests as needed to ensure the feature works properly. Please also ensure you are running eslint using [our config](https://github.com/labs12-real-estate/labs12-real-estate-FE/blob/master/.eslintrc.json), and eliminating any linting errors before attempting to create a pull request. Please also run Prettier using [our config](https://github.com/labs12-real-estate/labs12-real-estate-FE/blob/master/.prettierrc.json), to ensure you are meeting the formatting standards for this project.
+
+Once your feature has been finished, please use `git push -u origin *feature-name*` to create the branch on the remote repository, then create the pull request in github. As part of the pull request, please fill out the [pull request template](https://github.com/labs12-real-estate/labs12-real-estate-FE/blob/master/AppNotes/pull_request_template.md). Once completed, you may create your pull request. A review from a contributor and ultimate merge approval by an admin will be required. If there are requests raised in the review, please address them.
+
+Thanks for your interest in MyHouse; we look forward to your feedback & participation! <br/>
+—Jordan Stoddard
+
