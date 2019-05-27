@@ -1,6 +1,6 @@
 # MovieFan - Personal Project - Built by Jordan Stoddard
 
-<div align="center"> ## Explore. Discover. Remember. </div>
+<div align="center"  style="font-size:20px">Explore. Discover. Remember. </div>
 
 <div align="center"><img src="https://image.tmdb.org/t/p/original/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg" /></div>
 
