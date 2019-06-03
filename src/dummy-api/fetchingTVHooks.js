@@ -10,7 +10,7 @@ export const useGetTVTrending = () => {
       (() => {
         axios
           .get(
-            `https://api.themoviedb.org/3/trending/tv/week?api_key=${process.env.API_KEY}&sort_by=popularity.desc`
+            `https://api.themoviedb.org/3/trending/tv/week?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&sort_by=popularity.desc`
           )
           .then(res => setGetTVTrending(res.data.results))
           .catch(err => console.log(err));
@@ -26,7 +26,7 @@ export const useGetTVTrending = () => {
       (() => {
         axios
           .get(
-            `https://api.themoviedb.org/3/tv/${topic}?api_key=${process.env.API_KEY}&language=en-US&page=${page}`
+            `https://api.themoviedb.org/3/tv/${topic}?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&page=${page}`
           )
           .then(res => {
             const filteredResults = res.data.results.filter(show => show.poster_path)
@@ -43,7 +43,7 @@ export const useGetTVTrending = () => {
     useEffect(() => {
       (() => {
         axios.get(
-          `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.API_KEY}&language=en-US`
+          `https://api.themoviedb.org/3/tv/${id}?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => setGetTVShow(res.data))
         .catch(err => console.log(err))
@@ -59,7 +59,7 @@ export const useGetTVTrending = () => {
     useEffect(() => {
       (() => {
         axios.get(
-          `https://api.themoviedb.org/3/tv/${id}/credits?api_key=${process.env.API_KEY}&language=en-US`
+          `https://api.themoviedb.org/3/tv/${id}/credits?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           const filteredCast = res.data.cast.filter(person => person.profile_path)
@@ -78,7 +78,7 @@ export const useGetTVTrending = () => {
     useEffect(() => {
       (() => {
         axios.get(
-          `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${process.env.API_KEY}&language=en-US`
+          `https://api.themoviedb.org/3/tv/${id}/videos?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           if (res.data.results.length === 0) {
@@ -101,7 +101,7 @@ export const useGetTVTrending = () => {
     useEffect(() => {
       (() => {
         axios.get(
-          `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${process.env.API_KEY}&language=en-US`
+          `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           setGetTVReviews(res.data.results)
@@ -118,7 +118,7 @@ export const useGetTVTrending = () => {
     useEffect(() => {
       (() => {
         axios.get(
-          `http://api.themoviedb.org/3/search/tv?api_key=${process.env.API_KEY}&language=en-US&query=${str}`
+          `https://api.themoviedb.org/3/search/tv?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&query=${str}`
         )
         .then(res => {
           setSearchTVResults(res.data.results)
