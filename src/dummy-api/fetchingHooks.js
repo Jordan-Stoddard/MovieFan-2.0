@@ -9,9 +9,7 @@ export const useGetTopic = (topic, page) => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${topic}?api_key=${
-            process.env.API_KEY
-          }&language=en-US&page=${page}`
+          `https://api.themoviedb.org/3/movie/${topic}?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&page=${page}`
         )
         .then(res => setGetMovies(res.data.results))
         .catch(err => console.log(err));
@@ -27,9 +25,7 @@ export const useGetMovieById = id => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=${
-            process.env.API_KEY
-          }&language=en-US`
+          `https://api.themoviedb.org/3/movie/${id}?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => setGetMovie(res.data))
         .catch(err => console.log(err));
@@ -45,9 +41,7 @@ export const useGetCast = id => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${
-            process.env.API_KEY
-          }&language=en-US`
+          `https://api.themoviedb.org/3/movie/${id}/credits?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           const filteredCast = res.data.cast.filter(
@@ -68,9 +62,7 @@ export const useGetTrailer = id => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${
-            process.env.API_KEY
-          }&language=en-US`
+          `https://api.themoviedb.org/3/movie/${id}/videos?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           if (res.data.results.length === 0) {
@@ -95,9 +87,7 @@ export const useGetReviews = id => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${
-            process.env.API_KEY
-          }&language=en-US`
+          `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           setGetReviews(res.data.results);
@@ -115,9 +105,7 @@ export const useGetPerson = id => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/person/${id}?api_key=${
-            process.env.API_KEY
-          }&language=en-US`
+          `https://api.themoviedb.org/3/person/${id}?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           setGetPerson(res.data);
@@ -135,9 +123,7 @@ export const useGetPersonRoles = id => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${
-            process.env.API_KEY
-          }&language=en-US`
+          `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
         )
         .then(res => {
           setGetPersonRoles(res.data.cast);
@@ -155,9 +141,7 @@ export const useGetSearch = str => {
     (() => {
       axios
         .get(
-          `https://api.themoviedb.org/3/search/movie?api_key=${
-            process.env.API_KEY
-          }&language=en-US&query=${str}`
+          `https://api.themoviedb.org/3/search/movie?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&query=${str}`
         )
         .then(res => {
           setSearchResults(res.data.results);
