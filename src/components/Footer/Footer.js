@@ -16,16 +16,11 @@ export default function Footer() {
           <a
             target="_blank"
             className="footer-a"
-            href="https://www.google.com/"
+            href="https://jordan-stoddard.com/"
             rel="noopener noreferrer"
           >
-            www.jordan-stoddard.portfolio
+            www.jordan-stoddard.com
           </a>
-        </section>
-
-        <section className="footer-section-top">
-          <p className="footer-p">Phone number:</p>
-          <p className="footer-p">888-888-1337</p>
         </section>
 
         <section className="footer-section-copyright">
