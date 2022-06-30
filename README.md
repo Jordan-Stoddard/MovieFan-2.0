@@ -12,7 +12,7 @@
 
 MovieFan allows you to browse movies from top rated to upcoming, from old favorites to the newest releases.
 
-<strong>Front End Deployment: https://moviefanapp.online <br/>
+<strong>Front End Deployment: https://movie-fan-app-jordan-stoddard.vercel.app/ <br/>
   Movie API: https://www.themoviedb.org/
 
 </strong>
